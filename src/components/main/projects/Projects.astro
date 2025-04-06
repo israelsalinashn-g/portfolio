@@ -1,19 +1,23 @@
 ---
 import { projects_web, projects_movil } from "../../../const/const.js";
 import Project from "./Project.astro";
+import ProjectMovil from "./ProjectMovil.astro";
 const { lang } = Astro.props;
 ---
 
 <section class="section-projects">
   <div class="linear-grandient-1"></div>
   <div class="container-projects">
-    <h2 class="title-projects" id="proyectos">{lang==='es' ? 'Proyectos Web' : 'Web Projects'}</h2>
+    <h2 class="title-projects" id="proyectos">
+      {lang === "es" ? "Proyectos Web" : "Web Projects"}
+    </h2>
     <div>
       <ul class="ul-projects">
         {
           projects_web.map(
             ({ description, img, link, technologies, title }) => (
-              <Project lang={lang}
+              <Project
+                lang={lang}
                 img={img}
                 description={description}
                 link={link}
@@ -25,13 +29,16 @@ const { lang } = Astro.props;
         }
       </ul>
     </div>
-    <h2 class="title-projects" id="proyectos">{lang==='es' ? 'Proyectos Móvil' : 'Mobile Projects'}</h2>
+    <h2 class="title-projects" id="proyectos">
+      {lang === "es" ? "Proyectos Móvil" : "Mobile Projects"}
+    </h2>
     <div>
-      <ul class="ul-projects">
+      <ul class="ul-projects ul-projects-movil">
         {
           projects_movil.map(
             ({ description, img, link, technologies, title }) => (
-              <Project lang={lang}
+              <ProjectMovil
+                lang={lang}
                 img={img}
                 description={description}
                 link={link}
@@ -47,6 +54,23 @@ const { lang } = Astro.props;
 </section>
 
 <style>
+  .ul-projects-movil .li-project {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .ul-projects-movil .li-project img {
+    width: 40%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .ul-projects-movil .li-project > *:not(img) {
+    flex: 1;
+  }
+
   .linear-grandient-1 {
     position: absolute;
     left: 0;

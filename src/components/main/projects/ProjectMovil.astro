@@ -1,0 +1,107 @@
+---
+import { getIconComponent } from "../../../icons/IconAll.astro";
+const { lang, img, description, link, title, technologies } = Astro.props;
+---
+
+<li class="project-movil">
+    <div class="project-movil-img">
+        <img src={img} alt={title} />
+    </div>
+
+    <div class="project-movil-info">
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <p class="title-technologies">
+            {lang === "es" ? "Tecnologías" : "Technologies"}
+        </p>
+        <div class="container-technologies">
+            {
+                technologies.map(({ icon }) => {
+                    const IconComponent = getIconComponent(icon);
+                    return <i>{IconComponent && <IconComponent />}</i>;
+                })
+            }
+        </div>
+        <div class="container-link-project">
+            <a href={link} target="_blank"
+                >{lang === "es" ? "Ver más" : "More"}</a
+            >
+        </div>
+    </div>
+</li>
+
+<style>
+    .project-movil {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: 12px;
+        border-style: groove;
+        background-color: transparent;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-movil-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .project-movil-img img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-movil-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-movil-info h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white; /* gray-800 */
+    }
+
+    .project-movil-info p {
+        color: #f6f6f990;
+        font-size: 17px;
+    }
+
+    .project-movil-info .title-technologies {
+        padding-top: 20px;
+        font-size: 17px;
+        color: white;
+    }
+
+    .project-movil-info a {
+        margin-top: 0.5rem;
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        background-color: #2563eb; /* blue-600 */
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-movil-info a:hover {
+        background-color: #1d4ed8; /* blue-700 */
+    }
+
+    /* Responsive: fila en pantallas grandes */
+    @media (min-width: 768px) {
+        .project-movil {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+</style>
