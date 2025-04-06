@@ -1,0 +1,63 @@
+---
+import IconAngular from "./IconAngular.astro";
+import IconAstro from "./IconAstro.astro";
+import IconCss from "./IconCss.astro";
+import IconDart from "./IconDart.astro";
+import IconFirebase from "./IconFirebase.astro";
+import IconFlutter from "./IconFlutter.astro";
+import IconGit from "./IconGit.astro";
+import IconGithub from "./IconGithub.astro";
+import IconHtml from "./IconHtml.astro";
+import IconJavascript from "./IconJavascript.astro";
+import IconMaterialui from "./IconMaterialui.astro";
+import IconMongodb from "./IconMongodb.astro";
+import IconNestjs from "./IconNestjs.astro";
+import IconNextjs from "./IconNextjs.astro";
+import IconNodejs from "./IconNodejs.astro";
+import IconRadix from "./IconRadix.astro";
+import IconReact from "./IconReact.astro";
+import IconReactQuery from "./IconReactQuery.astro";
+import IconRedux from "./IconRedux.astro";
+import IconShadcn from "./IconShadcn.astro";
+import IconSqlserver from "./IconSqlserver.astro";
+import IconStripe from "./IconStripe.astro";
+import IconStyled from "./IconStyled.astro";
+import IconTailwind from "./IconTailwind.astro";
+import IconTypescript from "./IconTypescript.astro";
+import IconVite from "./IconVite.astro";
+import IconZustand from "./IconZustand.astro";
+
+export const ICONS = {
+  angular: IconAngular,
+  astro: IconAstro,
+  css: IconCss,
+  dart: IconDart,
+  firebase: IconFirebase,
+  flutter: IconFlutter,
+  git: IconGit,
+  github: IconGithub,
+  html: IconHtml,
+  javascript: IconJavascript,
+  materialui: IconMaterialui,
+  mongodb: IconMongodb,
+  nestjs: IconNestjs,
+  nextjs: IconNextjs,
+  nodejs: IconNodejs,
+  radix: IconRadix,
+  react: IconReact,
+  reactQuery: IconReactQuery,
+  redux: IconRedux,
+  shadcn: IconShadcn,
+  stripe: IconStripe,
+  styled: IconStyled,
+  sqlserver: IconSqlserver,
+  tailwind: IconTailwind,
+  typescript: IconTypescript,
+  vite: IconVite,
+  zustand: IconZustand,
+};
+
+export function getIconComponent(iconName: string) {
+  return ICONS[iconName] || null;
+}
+---

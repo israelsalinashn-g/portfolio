@@ -1,0 +1,113 @@
+---
+import { certifications } from "../../../const/const.js";
+---
+
+<section class="section_certifications">
+  <div class="linear-grandient-1"></div>
+  <div class="content_certifications">
+    <h3 class="title-certifications" id="certifications">Certificaciones</h3>
+    <ul class="ul-certifications">
+      {
+        certifications.map(({ date, title, img }) => (
+          <li class="li-certifications">
+            <span class="certifications" />
+            <div>
+              <img width="40" height="40" src={img} alt={title} loading="lazy" />
+            </div>
+            <div>
+              <h3>{title}</h3>
+              <span>{date}</span>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section_certifications {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #111111;
+    justify-content: center;
+    align-items: center;
+  }
+  .linear-grandient-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: radial-gradient(at left center, rgba(1, 190, 150 , 0.5), transparent , transparent); */
+    /* background: linear-gradient(to top, rgba(1, 190, 150, 0.5), #000); */
+    /* background: linear-gradient(to top, rgba(1, 190, 150, 0.5), #000); */
+
+    background: linear-gradient(to top, #000080, #000);
+    /* background: linear-gradient(135deg, #000080 0%, #000 100%);
+    background: radial-gradient(circle at 75% 25%, #000080, #000); */
+
+    /* #000080 */
+    background:;
+    z-index: 0;
+  }
+  .content_certifications {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1355px;
+  }
+  .title-certifications {
+    font-size: 27px;
+    color: #f6f6f9;
+    text-align: left;
+    width: 100%;
+    font-weight: 800;
+    scroll-margin-top: 80px;
+    padding: 20px 0;
+  }
+  .ul-certifications {
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .li-certifications {
+    color: #f6f6f9;
+    list-style: none;
+    position: relative;
+    display: flex;
+    padding-bottom: 30px;
+    /* padding: 0px 20px; */
+    /* border-left: 1px solid #f6f6f9; */
+    /* gap: 20px; */
+    /* position: relative;
+    padding-bottom: 50px; */
+  }
+  .circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -5px;
+    top: 5px;
+    background-color: #f6f6f9;
+  }
+  .li-certifications img {
+    margin-right: 20px;
+  }
+  .li-certifications h3 {
+    padding-bottom: 5px;
+    font-weight: 200;
+  }
+  .li-certifications p {
+    padding: 5px 0;
+  }
+  .li-certifications span {
+    font-size: 13px;
+  }
+</style>
