@@ -1,12 +1,13 @@
 ---
 import { skills } from "../../../const/const.js";
 import { getIconComponent } from "../../../icons/IconAll.astro";
+const { lang } = Astro.props;
 ---
 
 <section class="section-skill">
   <div class="linear-grandient-1"></div>
   <div class="container-skill">
-    <h2 class="title-skills" id="skills">Habilidades</h2>
+    <h2 class="title-skills" id="skills">{lang==='es'? 'Habilidades' : 'Skills'}</h2>
     <ul class="ul-skill">
       {
         skills.map(({ icon, title }) => {

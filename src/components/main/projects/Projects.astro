@@ -1,18 +1,19 @@
 ---
 import { projects_web, projects_movil } from "../../../const/const.js";
 import Project from "./Project.astro";
+const { lang } = Astro.props;
 ---
 
 <section class="section-projects">
   <div class="linear-grandient-1"></div>
   <div class="container-projects">
-    <h2 class="title-projects" id="proyectos">Proyectos Web</h2>
+    <h2 class="title-projects" id="proyectos">{lang==='es' ? 'Proyectos Web' : 'Web Projects'}</h2>
     <div>
       <ul class="ul-projects">
         {
           projects_web.map(
             ({ description, img, link, technologies, title }) => (
-              <Project
+              <Project lang={lang}
                 img={img}
                 description={description}
                 link={link}
@@ -24,13 +25,13 @@ import Project from "./Project.astro";
         }
       </ul>
     </div>
-    <h2 class="title-projects" id="proyectos">Proyectos Móvil</h2>
+    <h2 class="title-projects" id="proyectos">{lang==='es' ? 'Proyectos Móvil' : 'Mobile Projects'}</h2>
     <div>
       <ul class="ul-projects">
         {
           projects_movil.map(
             ({ description, img, link, technologies, title }) => (
-              <Project
+              <Project lang={lang}
                 img={img}
                 description={description}
                 link={link}

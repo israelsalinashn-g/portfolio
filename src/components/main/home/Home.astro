@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import photoperfil from "../../../assets/img/photo-perfil.webp";
+import photoperfil from "../../../../public/img/photo-perfil.webp";
+const { lang } = Astro.props;
 ---
 
 <div class="content-presentation">
@@ -11,6 +12,7 @@ import photoperfil from "../../../assets/img/photo-perfil.webp";
       <!-- <h2 class="text-hello">Hola <strong>soy</strong></h2> -->
       <h2 class="text-name">Israel Salinas</h2>
       <div class="container-profession">
+        { lang === 'es'?
         <div>
           <span class="p-profession">I</span>
           <span class="p-profession">n</span>
@@ -37,22 +39,47 @@ import photoperfil from "../../../assets/img/photo-perfil.webp";
           <span class="p-profession">c</span>
           <span class="p-profession">o</span>
         </div>
+        :
+        <div>
+          <span class="p-profession">S</span>
+          <span class="p-profession">o</span>
+          <span class="p-profession">f</span>
+          <span class="p-profession">t</span>
+          <span class="p-profession">w</span>
+          <span class="p-profession">a</span>
+          <span class="p-profession">r</span>
+          <span class="p-profession">e</span>
+          <span class="">&nbsp;</span>
+        </div>
+        <div class="">
+          <span class="p-profession">E</span>
+          <span class="p-profession">n</span>
+          <span class="p-profession">g</span>
+          <span class="p-profession">i</span>
+          <span class="p-profession">n</span>
+          <span class="p-profession">e</span>
+          <span class="p-profession">e</span>
+          <span class="p-profession">r</span>
+        </div>
+        }
       </div>
       <p class="p-presentation">
-        Tengo amplia experiencia en infraestructuras tecnológicas y, desde hace unos años, he comenzado a incorporarme al desarrollo de software. Mi enfoque se centra en crear soluciones eficientes y escalables, utilizando las últimas tecnologías y mejores prácticas de desarrollo.
+        {lang === 'es'
+          ? "Soy un ingeniero informático con experiencia en el desarrollo de software y la administración de sistemas. Me apasiona crear soluciones tecnológicas que mejoren la eficiencia y la productividad."
+          : "I am a computer engineer with experience in software development and system administration. I am passionate about creating technological solutions that improve efficiency and productivity."}
       </p>
       <div class="container-curriculum">
         <a href="https://wa.me/+50433821130" target="_blank" class="a-action"
-          >Hablemos</a
+          >{ lang==='es' ? 'Contacto': 'Contact me'}</a
         >
         <a
           href="https://drive.google.com/file/d/1cQ4XYBRdB_4c5GFXawEJsNMw9e7tbNBw/view?usp=sharing"
           class="a-curriculum"
-          target="_blank">Ver Currículum</a
+          target="_blank">{ lang==='es' ? 'CV': 'Resumé'}</a
         >
       </div>
       <div class="container-social">
-        <p class="">Perfiles</p>
+        <p class="">{lang==='es' ? 'Perfiles' : 'Profiles'}</p>
         <a href="https://github.com/israelsalinas-g" target="_blank">
           <li class="li-social">
             <i class="fa-brands fa-github"></i>

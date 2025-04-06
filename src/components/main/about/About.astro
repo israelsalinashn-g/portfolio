@@ -1,13 +1,15 @@
+---
+const { lang } = Astro.props;
+---
 <section class="section-about">
   <div class="linear-grandient-1"></div>
   <div class="container-about">
     <div class="container-text-about">
-      <h2 class="title-about" id="sobremi">Sobre mi</h2>
+      <h2 class="title-about" id="sobremi">{lang === 'es' ? 'Sobre mi' : 'About me'}</h2>
       <p>
-        Tengo amplia experiencia en infraestructuras tecnológicas y, desde hace
-        unos años, he comenzado a incorporarme al desarrollo de software. Mi
-        enfoque se centra en crear soluciones eficientes y escalables,
-        utilizando las últimas tecnologías y mejores prácticas de desarrollo.
+        {lang === 'es' 
+        ? "Ingeniero de Software con una sólida base en infraestructura de TI y más de 20 años de experiencia en soluciones tecnológicas. En los últimos años me he especializado en desarrollo full stack, creando aplicaciones web escalables y eficientes utilizando frameworks modernos y buenas prácticas de codificación. Apasionado por resolver problemas del mundo real a través del código, la automatización y el diseño centrado en el usuario." 
+        : "Experienced Software Engineer with a solid background in IT infrastructure and over 20 years of experience delivering technology solutions. In recent years, I’ve expanded my expertise into full stack software development, focusing on building scalable and efficient web applications using modern frameworks and best coding practices. Passionate about solving real-world problems through code, automation, and user-focused design."}
       </p>
     </div>
     <div class="container-svg-about">

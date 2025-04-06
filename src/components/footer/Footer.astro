@@ -1,8 +1,11 @@
+---
+const { lang } = Astro.props;
+---
 <footer>
   <section class="section-footer">
     <div class="linear-grandient-1"></div>
     <div class="container-footer">
-      <h2 class="title-contact" id="contacto">Contacto</h2>
+      <h2 class="title-contact" id="contacto">{ lang==='es','Contacto','Contact'}</h2>
       <div class="container-redes">
         <a href="https://wa.me/+50433821130" target="_blank">
           <li class="li-contact">

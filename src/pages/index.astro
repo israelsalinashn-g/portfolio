@@ -27,6 +27,17 @@ import Footer from "../components/footer/Footer.astro";
     <script
       src="https://kit.fontawesome.com/2898a0ac51.js"
       crossorigin="anonymous"></script>
+    <script type="module">
+      const savedLang = localStorage.getItem("lang");
+      if (savedLang && !window.location.pathname.startsWith("/" + savedLang)) {
+        window.location.replace("/" + savedLang);
+      } else if (!savedLang) {
+        const browserLang = navigator.language.startsWith("es") ? "es" : "en";
+        localStorage.setItem("lang", browserLang);
+        window.location.replace("/" + browserLang);
+      }
+    </script>
+
     <title>Portfolio | Israel Salinas</title>
   </head>
   <body>

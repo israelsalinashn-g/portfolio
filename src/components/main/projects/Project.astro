@@ -1,5 +1,6 @@
 ---
 import { getIconComponent } from "../../../icons/IconAll.astro";
+const { lang } = Astro.props;
 
 type Technology = {
   icon?: string;
@@ -22,7 +23,7 @@ const { technologies, title, img, description, link } = Astro.props;
   <p class="description-project">
     {description}
   </p>
-  <p class="title-technologies">Tecnologías usadas</p>
+  <p class="title-technologies">{lang==='es'? 'Tecnologías': 'Technologies'}</p>
   <div class="container-technologies">
     {
       technologies.map(({ icon }) => {
@@ -32,7 +33,7 @@ const { technologies, title, img, description, link } = Astro.props;
     }
   </div>
   <div class="container-link-project">
-    <a href={link} target="_blank">Ver más</a>
+    <a href={link} target="_blank">{lang==='es' ? 'Ver más' : 'More'}</a>
   </div>
 </li>
 

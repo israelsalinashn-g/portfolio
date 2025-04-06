@@ -6,15 +6,16 @@ import About from "./about/About.astro";
 import Skills from "./skills/Skills.astro";
 import Home from "./home/Home.astro";
 
+const { lang } = Astro.props;
 ---
 
 <main>
   <div class="container_p">
-    <Home />
-    <Projects />
-    <Skills />
-    <Studies />
-    <Certifications />
-    <About />
+    <Home lang={lang}/>
+    <Projects lang={lang}/>
+    <Skills lang={lang}/>
+    <Studies lang={lang}/>
+    <Certifications lang={lang}/>
+    <About lang={lang}/>
   </div>
 </main>
