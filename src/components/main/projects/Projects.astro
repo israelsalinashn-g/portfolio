@@ -8,9 +8,12 @@ const { lang } = Astro.props;
 <section class="section-projects">
   <div class="linear-grandient-1"></div>
   <div class="container-projects">
-    <h2 class="title-projects" id="proyectos">
-      {lang === "es" ? "Proyectos Web" : "Web Projects"}
-    </h2>
+    <div class="header-projects">
+      <h2 class="title-projects" id="proyectos">
+        {lang === "es" ? "Proyectos Web" : "Web Projects"}
+      </h2>
+      <a href="#inicio" class="btn-inicio"><i class="fas fa-home"></i></a>
+    </div>
     <div>
       <ul class="ul-projects">
         {
@@ -96,6 +99,31 @@ const { lang } = Astro.props;
     margin: 0 auto;
     max-width: 1355px;
   }
+  .header-projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .btn-inicio {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-inicio:hover {
+    background-color: #0056b3;
+  }
+
   .title-projects {
     position: relative;
     display: block;
@@ -120,6 +148,11 @@ const { lang } = Astro.props;
   }
 
   /* responsive */
+  @media (max-width: 768px) {
+    .btn-inicio {
+      display: none;
+    }
+  }
 
   @media (min-width: 300px) {
     .ul-projects {

@@ -7,9 +7,12 @@ const { lang } = Astro.props;
 <section class="section-skill">
   <div class="linear-grandient-1"></div>
   <div class="container-skill">
-    <h2 class="title-skills" id="skills">
-      {lang === "es" ? "Habilidades" : "Skills"}
-    </h2>
+    <div class="header-skills">
+      <h2 class="title-skills" id="skills">
+        {lang === "es" ? "Habilidades" : "Skills"}
+      </h2>
+      <a href="#inicio" class="btn-inicio"><i class="fas fa-home"></i></a>
+    </div>
     <ul class="ul-skill">
       {
         skills.map(({ icon, title }) => {
@@ -42,6 +45,32 @@ const { lang } = Astro.props;
     height: 100%;
     max-width: 1355px;
   }
+
+  .header-skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .btn-inicio {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-inicio:hover {
+    background-color: #0056b3;
+  }
+
   .title-skills {
     position: relative;
     display: block;
@@ -90,6 +119,12 @@ const { lang } = Astro.props;
     overflow: hidden;
     grid-template-columns: repeat(8, 1fr);
   }
+  @media (max-width: 768px) {
+    .btn-inicio {
+      display: none;
+    }
+  }
+
   @media (min-width: 300px) {
     .ul-skill {
       grid-template-columns: repeat(3, 1fr);

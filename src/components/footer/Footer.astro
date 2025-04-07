@@ -6,9 +6,12 @@ const { lang } = Astro.props;
   <section class="section-footer">
     <div class="linear-grandient-1"></div>
     <div class="container-footer">
-      <h2 class="title-contact" id="contacto">
-        {lang === "es" ? "Contacto" : "Contact"}
-      </h2>
+      <div class="header-footer">
+        <h2 class="title-contact" id="contacto">
+          {lang === "es" ? "Contacto" : "Contact"}
+        </h2>
+        <a href="#inicio" class="btn-inicio"><i class="fas fa-home"></i></a>
+      </div>
       <div class="container-redes">
         <a href="https://wa.me/+50433821130" target="_blank">
           <li class="li-contact">
@@ -43,6 +46,16 @@ const { lang } = Astro.props;
 </footer>
 
 <style>
+  .section-footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #111111;
+    justify-content: center;
+    align-items: center;
+  }
+
   .linear-grandient-1 {
     position: absolute;
     left: 0;
@@ -52,25 +65,52 @@ const { lang } = Astro.props;
     background: linear-gradient(to top, #000080, #000);
     z-index: 0;
   }
-  .section-footer {
-    position: relative;
-    width: 100%;
-    background-color: #111111;
-  }
+
   .container-footer {
     position: relative;
+    z-index: 1;
     width: 90%;
+    height: 100%;
     margin: 0 auto;
     padding: 20px 0;
     max-width: 1355px;
   }
-  .title-contact {
-    color: #f6f6f9;
-    padding: 10px 0;
-    font-size: 25px;
-    font-weight: 700;
-    scroll-margin-top: 80px;
+
+  .header-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
   }
+
+  .btn-inicio {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-inicio:hover {
+    background-color: #0056b3;
+  }
+
+  .title-contact {
+    font-size: 27px;
+    color: #f6f6f9;
+    text-align: left;
+    width: 100%;
+    font-weight: 800;
+    scroll-margin-top: 80px;
+    padding: 20px 0;
+  }
+
   .container-redes {
     position: relative;
     display: flex;

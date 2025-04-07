@@ -6,32 +6,47 @@ const { lang } = Astro.props;
   <h1 id="inicio">Portfolio</h1>
   <nav class="nav">
     <ul class="ul-nav">
-      <a href="#inicio">
-        <li class="li-nav">{lang === "es" ? "Inicio" : "Home"}</li>
-      </a>
+      <li class="li-nav">
+        <a href="#inicio">
+          {lang === "es" ? "Inicio" : "Home"}
+        </a>
+      </li>
 
-      <a href="#proyectos">
-        <li class="li-nav">{lang === "es" ? "Proyectos" : "Projects"}</li>
-      </a>
+      <li class="li-nav">
+        <a href="#proyectos">
+          {lang === "es" ? "Proyectos" : "Projects"}
+        </a>
+      </li>
 
-      <a href="#skills">
-        <li class="li-nav">{lang === "es" ? "Habilidades" : "Skills"}</li>
-      </a>
-      <a href="#studies">
-        <li class="li-nav">{lang === "es" ? "Estudios" : "Education"}</li>
-      </a>
-      <a href="#certifications">
-        <li class="li-nav">
+      <li class="li-nav">
+        <a href="#skills">
+          {lang === "es" ? "Habilidades" : "Skills"}
+        </a>
+      </li>
+
+      <li class="li-nav">
+        <a href="#studies">
+          {lang === "es" ? "Estudios" : "Education"}
+        </a>
+      </li>
+
+      <li class="li-nav">
+        <a href="#certifications">
           {lang === "es" ? "Certificaciones" : "Certifications"}
-        </li>
-      </a>
-      <a href="#sobremi">
-        <li class="li-nav">{lang === "es" ? "Sobre mi" : "About me"}</li>
-      </a>
+        </a>
+      </li>
 
-      <a href="#contacto">
-        <li class="li-nav">{lang === "es" ? "Contacto" : "Contact"}</li>
-      </a>
+      <li class="li-nav">
+        <a href="#sobremi">
+          {lang === "es" ? "Sobre mi" : "About me"}
+        </a>
+      </li>
+
+      <li class="li-nav">
+        <a href="#contacto">
+          {lang === "es" ? "Contacto" : "Contact"}
+        </a>
+      </li>
     </ul>
   </nav>
   <div class="container-bnt-menu">
@@ -116,11 +131,13 @@ const { lang } = Astro.props;
     max-width: 1355px;
     margin: 0 auto;
   }
+
   .header h1 {
     display: inline-block;
     position: relative;
     z-index: 20;
   }
+
   .nav {
     position: relative;
     display: flex;
@@ -128,6 +145,11 @@ const { lang } = Astro.props;
     align-items: center;
     color: #f6f6f9;
   }
+
+  .menu-activado {
+    right: 0px;
+  }
+
   .ul-nav {
     position: relative;
     display: flex;
@@ -181,7 +203,6 @@ const { lang } = Astro.props;
     .header {
       position: fixed;
       display: flex;
-
       justify-items: center;
       justify-content: space-between;
       top: 0;
