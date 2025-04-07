@@ -1,33 +1,36 @@
 ---
 const { lang } = Astro.props;
 ---
+
 <header class="header">
   <h1 id="inicio">Portfolio</h1>
   <nav class="nav">
     <ul class="ul-nav">
       <a href="#inicio">
-        <li class="li-nav">{lang==='es'? 'Inicio': 'Home'}</li>
+        <li class="li-nav">{lang === "es" ? "Inicio" : "Home"}</li>
       </a>
 
       <a href="#proyectos">
-        <li class="li-nav">{lang==='es'? 'Proyectos': 'Projects'}</li>
+        <li class="li-nav">{lang === "es" ? "Proyectos" : "Projects"}</li>
       </a>
 
       <a href="#skills">
-        <li class="li-nav">{lang==='es'? 'Habilidades': 'Skills'}</li>
+        <li class="li-nav">{lang === "es" ? "Habilidades" : "Skills"}</li>
       </a>
       <a href="#studies">
-        <li class="li-nav">{lang==='es'? 'Estudios' : 'Education'}</li>
+        <li class="li-nav">{lang === "es" ? "Estudios" : "Education"}</li>
       </a>
       <a href="#certifications">
-        <li class="li-nav">{lang==='es'? 'Certificaciones' : 'Certifications'}</li>
+        <li class="li-nav">
+          {lang === "es" ? "Certificaciones" : "Certifications"}
+        </li>
       </a>
       <a href="#sobremi">
-        <li class="li-nav">{lang==='es'? 'Sobre mi': 'About me'}</li>
+        <li class="li-nav">{lang === "es" ? "Sobre mi" : "About me"}</li>
       </a>
 
       <a href="#contacto">
-        <li class="li-nav">{lang==='es'? 'Contacto' : 'Contact' }</li>
+        <li class="li-nav">{lang === "es" ? "Contacto" : "Contact"}</li>
       </a>
     </ul>
   </nav>
@@ -65,16 +68,14 @@ const { lang } = Astro.props;
     });
   </script>
 
-<nav class="language-switcher">
-  <a href="/es" class="lang-button">Español</a>
-  <a href="/en" class="lang-button">English</a>
-</nav>
-
+  <nav class="language-switcher">
+    <a href="/es" class="lang-button">Español</a>
+    <a href="/en" class="lang-button">English</a>
+  </nav>
 </header>
 
 <style is:global>
-
-.lang-switcher button {
+  .lang-switcher button {
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -92,15 +93,15 @@ const { lang } = Astro.props;
     font-weight: bold;
   }
 
-/* Opcional: posición para móviles */
-@media (max-width: 720px) {
-  .lang-switcher {
-    position: absolute;
-    top: 25px;
-    right: 70px;
-    z-index: 10000;
+  /* Opcional: posición para móviles */
+  @media (max-width: 720px) {
+    .lang-switcher {
+      position: absolute;
+      top: 25px;
+      right: 70px;
+      z-index: 10000;
+    }
   }
-}
 
   .header {
     position: relative;
@@ -150,7 +151,7 @@ const { lang } = Astro.props;
     position: absolute;
     height: 2px;
     width: 0%;
-    background-color: #000080; // #01be96;
+    background-color: #000080;
     bottom: -3px;
   }
   .li-nav:hover::before {
@@ -158,7 +159,7 @@ const { lang } = Astro.props;
     transition: 0.4s;
   }
   .li-nav:hover {
-    color: #000080; // #01be96;
+    color: #000080;
   }
 
   .container-bnt-menu {
@@ -237,11 +238,10 @@ const { lang } = Astro.props;
       text-align: center;
       width: 100%;
       margin: 0;
-      
     }
     .li-nav:hover {
-      background-color: #000080; // #01be96;
-      color : #000
+      background-color: #000080;
+      color: #000;
     }
     .li-nav:hover::before {
       content: "";

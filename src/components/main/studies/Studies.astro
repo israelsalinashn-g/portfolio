@@ -6,14 +6,16 @@ const { lang } = Astro.props;
 <section class="section_studies">
   <div class="linear-grandient-1"></div>
   <div class="content_studies">
-    <h3 class="title-studies" id="studies">{lang==='es' ? 'Estudios' : 'Education'}</h3>
+    <h3 class="title-studies" id="studies">
+      {lang === "es" ? "Estudios" : "Education"}
+    </h3>
     <ul class="ul-studies">
       {
         studies.map(({ date, title, corporation }) => (
           <li class="li-studies">
             <span class="circle" />
             <div>
-              <h3>{title}</h3>
+              <h3>{title[lang]}</h3>
               <p>{corporation}</p>
               <span>{date}</span>
             </div>

@@ -1,13 +1,18 @@
-import { date } from "astro/zod";
 
 export const studies = [
   {
-    title: "Ingeniero en Informática",
+    title: {
+      'es': "Ingeniero en Informática",
+      'en': "Bachelor’s Degree in Computer Engineering",
+    },
     corporation: "CEUTEC (San Pedro Sula) ",
     date: "2024",
   },
   {
-    title: "Técnico en Ciencias de la Computación",
+    title: {
+      'es': "Técnico en Ciencias de la Computación",
+      'en': "Computer Science Technician",
+    },
     corporation: "CAD Sistemas",
     date: "1992",
   },
@@ -158,8 +163,12 @@ export const projects_web = [
   {
     img: "/projects/orientaplus.webp",
     title: "OrientaPlus",
-    link: "https://youtu.be/TCjMLckmYLY?feature=share",
-    description: `Proyecto FullStack para la gestión de departamento de orientación educativa, integra un asistente con IA`,
+    link_youtube: "https://youtu.be/TCjMLckmYLY?feature=share",
+    link: "/videos/orientaplus_web.mp4",
+    description: {
+      'es': `Proyecto FullStack para la gestión de departamento de orientación educativa, integra un asistente con IA`,
+      'en': `FullStack project for the management of the educational guidance department, integrates an AI assistant`,
+    },
     technologies: [
       {
         icon: IconKeys.typescript,
@@ -181,8 +190,12 @@ export const projects_web = [
   {
     img: "/projects/sgah.webp",
     title: "SGAH",
-    link: "https://youtu.be/hnQYIqbG25I",
-    description: `Sistema para la gestión de alimentación hospitalaria para múltiples salas y tipos de alimentación.`,
+    link_youtube: "https://youtu.be/-IuVWy_9R7c",
+    link: "/videos/sgah_web_app.mp4",
+    description: {
+      'es': `Sistema para la gestión de alimentación hospitalaria para múltiples salas y tipos de alimentación.`,
+      'en': `System for the management of hospital food for multiple rooms and types of food.`,
+    },
     technologies: [
       {
         icon: IconKeys.typescript,
@@ -207,8 +220,12 @@ export const projects_movil = [
   {
     img: "/projects/terrakai.jpg",
     title: "TerraKAI",
-    link: "https://youtube.com/shorts/yuatUGcrthc?feature=share",
-    description: `Aplicación móvil para la gestión de agencias de bienes raíces.`,
+    link_yourtube: "https://youtube.com/shorts/yuatUGcrthc?feature=share",
+    link: "/videos/Terrakai-mockup3.mp4",
+    description: {
+      'es': `Aplicación móvil para la gestión de agencias de bienes raíces.`,
+      'en': `Mobile application for the management of real estate agencies.`,
+    },
     technologies: [
       {
         icon: IconKeys.dart,
@@ -224,8 +241,12 @@ export const projects_movil = [
   {
     img: "/projects/autodealer.jpg",
     title: "Auto Dealer",
-    link: "https://youtube.com/shorts/ryv4M4wodjs?feature=share",
-    description: "Aplicación móvil para la gestión de dealer de autos.",
+    link_youtube: "https://youtube.com/shorts/ryv4M4wodjs?feature=share",
+    link: "/videos/MejoresAutos-mockup3.mp4",
+    description: {
+      'es': "Aplicación móvil para la gestión de dealer de autos.",
+      'en': "Mobile application for the management of car dealers.",
+    },
     technologies: [
       {
         icon: IconKeys.dart,
@@ -241,8 +262,12 @@ export const projects_movil = [
   {
     img: "/projects/orientaplus_movil.jpg",
     title: "OrientaPlus Móvil",
-    link: "https://youtube.com/shorts/puuyvKNYnUs?feature=share",
-    description: "Aplicación móvil para consultas de orientación educativa.",
+    link_youtube: "https://youtube.com/shorts/puuyvKNYnUs?feature=share",
+    link: "/videos/OrientaPlus_Movil.mp4",
+    description: {
+      'es': "Aplicación móvil para consultas de orientación educativa.",
+      'en': "Mobile application for educational guidance consultations.",
+    },
     technologies: [
       {
         icon: IconKeys.angular,
@@ -259,37 +284,37 @@ export const projects_movil = [
 
 export const certifications = [
   {
-    img: "../../public/certifications/unifi.png",
+    img: "/certifications/unifi.png",
     title: "UniFi Network Professional",
     date: "2024",
   },
   {
-    img: "../../public/certifications/Genexus.png",
+    img: "/certifications/Genexus.png",
     title: "GeneXus 17 Analyst",
     date: "2022",
   },
   {
-    img: "../../public/certifications/Genexus.png",
+    img: "/certifications/Genexus.png",
     title: "GeneXus 17 Junior Analyst",
     date: "2022",
   },
   {
-    img: "../../public/certifications/Lenel.jpg",
+    img: "/certifications/Lenel.jpg",
     title: "Lenel Certified Professional",
     date: "2019",
   },
   {
-    img: "../../public/certifications/Milestone.png",
-    title: "Mlestone Certified Engineer",
+    img: "/certifications/Milestone.png",
+    title: "Milestone Certified Engineer",
     date: "2019",
   },
   {
-    img: "../../public/certifications/Mikrotik.png",
+    img: "/certifications/Mikrotik.png",
     title: "MikroTik Certified Network Associate",
     date: "2019",
   },
   {
-    img: "../../public/certifications/Kantech.png",
+    img: "/certifications/Kantech.png",
     title: "kantech - Entrapass Corporate Edition",
     date: "2019",
   },
