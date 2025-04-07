@@ -158,7 +158,7 @@ export const projects_web = [
   {
     img: "/projects/orientaplus.webp",
     title: "OrientaPlus",
-    link: "https://ecommerce-stripe-763m.vercel.app/",
+    link: "https://youtu.be/TCjMLckmYLY?feature=share",
     description: `Proyecto FullStack para la gestión de departamento de orientación educativa, integra un asistente con IA`,
     technologies: [
       {
@@ -181,7 +181,7 @@ export const projects_web = [
   {
     img: "/projects/sgah.webp",
     title: "SGAH",
-    link: "https://nexanime.vercel.app",
+    link: "https://youtu.be/hnQYIqbG25I",
     description: `Sistema para la gestión de alimentación hospitalaria para múltiples salas y tipos de alimentación.`,
     technologies: [
       {
@@ -222,7 +222,7 @@ export const projects_movil = [
     ],
   },
   {
-    img: "../../public/projects/autodealer.jpg",
+    img: "/projects/autodealer.jpg",
     title: "Auto Dealer",
     link: "https://youtube.com/shorts/ryv4M4wodjs?feature=share",
     description: "Aplicación móvil para la gestión de dealer de autos.",
@@ -235,6 +235,23 @@ export const projects_movil = [
       },
       {
         icon: IconKeys.firebase,
+      },
+    ],
+  },
+  {
+    img: "/projects/orientaplus_movil.jpg",
+    title: "OrientaPlus Móvil",
+    link: "https://youtube.com/shorts/puuyvKNYnUs?feature=share",
+    description: "Aplicación móvil para consultas de orientación educativa.",
+    technologies: [
+      {
+        icon: IconKeys.angular,
+      },
+      {
+        icon: IconKeys.ionic,
+      },
+      {
+        icon: IconKeys.nestjs,
       },
     ],
   },

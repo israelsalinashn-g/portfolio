@@ -73,7 +73,7 @@ const { lang } = Astro.props;
           >{ lang==='es' ? 'Contacto': 'Contact me'}</a
         >
         <a
-          href="https://drive.google.com/file/d/1cQ4XYBRdB_4c5GFXawEJsNMw9e7tbNBw/view?usp=sharing"
+          href={lang==='es'?'https://drive.google.com/file/d/17WrIKzA3QPq32miLa5eJaKMnnh7Z7Gx1/view?usp=sharing':'https://drive.google.com/file/d/17w0thNIGkWu7K00lYHJkk_XPVtAhGQUe/view?usp=drive_link' }
           class="a-curriculum"
           target="_blank">{ lang==='es' ? 'CV': 'Resumé'}</a
         >
