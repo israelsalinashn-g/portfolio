@@ -52,60 +52,24 @@ export const IconKeys = {
 
 export const skills = [
   {
-    title: "HTML",
-    icon: IconKeys.html,
-  },
-  {
-    title: "CSS",
-    icon: IconKeys.css,
-  },
-  {
-    title: "Javascript",
-    icon: IconKeys.javascript,
+    title: "Angular",
+    icon: IconKeys.angular,
   },
   {
     title: "Astro",
     icon: IconKeys.astro,
   },
   {
-    title: "Typescript",
-    icon: IconKeys.typescript,
-  },
-  {
-    title: "Angular",
-    icon: IconKeys.angular,
-  },
-  {
-    title: "NestJS",
-    icon: IconKeys.nestjs,
-  },
-  {
-    title: "Flutter",
-    icon: IconKeys.flutter,
+    title: "CSS",
+    icon: IconKeys.css,
   },
   {
     title: "Dart",
     icon: IconKeys.dart,
   },
   {
-    title: "Tailwind",
-    icon: IconKeys.tailwind,
-  },
-  {
-    title: "Material UI",
-    icon: IconKeys.materialui,
-  },
-  {
-    title: "NodeJS",
-    icon: IconKeys.nodejs,
-  },
-  {
-    title: "MongoDB",
-    icon: IconKeys.mongodb,
-  },
-  {
-    title: "SQL Server",
-    icon: IconKeys.sqlserver,
+    title: "Flutter",
+    icon: IconKeys.flutter,
   },
   {
     title: "Git",
@@ -115,7 +79,42 @@ export const skills = [
     title: "Github",
     icon: IconKeys.github,
   },
-
+  {
+    title: "HTML",
+    icon: IconKeys.html,
+  },
+  {
+    title: "Javascript",
+    icon: IconKeys.javascript,
+  },
+  {
+    title: "Material UI",
+    icon: IconKeys.materialui,
+  },
+  {
+    title: "MongoDB",
+    icon: IconKeys.mongodb,
+  },
+  {
+    title: "NestJS",
+    icon: IconKeys.nestjs,
+  },
+  {
+    title: "NodeJS",
+    icon: IconKeys.nodejs,
+  },
+  {
+    title: "Tailwind",
+    icon: IconKeys.tailwind,
+  },
+  {
+    title: "Typescript",
+    icon: IconKeys.typescript,
+  },
+  {
+    title: "SQL Server",
+    icon: IconKeys.sqlserver,
+  },
   // {
   //   title: "Firebase",
   //   icon: IconKeys.firebase,
@@ -158,13 +157,12 @@ export const skills = [
   // },
 ];
 
-
 export const projects_web = [
   {
     img: "/projects/orientaplus.webp",
     title: "OrientaPlus",
-    link_youtube: "https://youtu.be/TCjMLckmYLY?feature=share",
-    link: "/videos/orientaplus_web.mp4",
+    link: "https://youtu.be/TCjMLckmYLY?feature=share",
+    link2: "/videos/orientaplus_web.mp4",
     description: {
       'es': `Proyecto FullStack para la gestión de departamento de orientación educativa, integra un asistente con IA`,
       'en': `FullStack project for the management of the educational guidance department, integrates an AI assistant`,
@@ -190,8 +188,8 @@ export const projects_web = [
   {
     img: "/projects/sgah.webp",
     title: "SGAH",
-    link_youtube: "https://youtu.be/-IuVWy_9R7c",
-    link: "/videos/sgah_web_app.mp4",
+    link: "https://youtu.be/-IuVWy_9R7c",
+    link2: "/videos/sgah_web_app.mp4",
     description: {
       'es': `Sistema para la gestión de alimentación hospitalaria para múltiples salas y tipos de alimentación.`,
       'en': `System for the management of hospital food for multiple rooms and types of food.`,
@@ -220,8 +218,8 @@ export const projects_movil = [
   {
     img: "/projects/terrakai.jpg",
     title: "TerraKAI",
-    link_yourtube: "https://youtube.com/shorts/yuatUGcrthc?feature=share",
-    link: "/videos/Terrakai-mockup3.mp4",
+    link: "https://youtube.com/shorts/yuatUGcrthc?feature=share",
+    link2: "/videos/Terrakai-mockup3.mp4",
     description: {
       'es': `Aplicación móvil para la gestión de agencias de bienes raíces.`,
       'en': `Mobile application for the management of real estate agencies.`,
@@ -241,8 +239,8 @@ export const projects_movil = [
   {
     img: "/projects/autodealer.jpg",
     title: "Auto Dealer",
-    link_youtube: "https://youtube.com/shorts/ryv4M4wodjs?feature=share",
-    link: "/videos/MejoresAutos-mockup3.mp4",
+    link: "https://youtube.com/shorts/ryv4M4wodjs?feature=share",
+    link2: "/videos/MejoresAutos-mockup3.mp4",
     description: {
       'es': "Aplicación móvil para la gestión de dealer de autos.",
       'en': "Mobile application for the management of car dealers.",
@@ -262,8 +260,8 @@ export const projects_movil = [
   {
     img: "/projects/orientaplus_movil.jpg",
     title: "OrientaPlus Móvil",
-    link_youtube: "https://youtube.com/shorts/puuyvKNYnUs?feature=share",
-    link: "/videos/OrientaPlus_Movil.mp4",
+    link: "https://youtube.com/shorts/puuyvKNYnUs?feature=share",
+    link2: "/videos/OrientaPlus_Movil.mp4",
     description: {
       'es': "Aplicación móvil para consultas de orientación educativa.",
       'en': "Mobile application for educational guidance consultations.",
