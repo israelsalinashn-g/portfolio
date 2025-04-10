@@ -21,18 +21,23 @@ export const studies = [
 export const IconKeys = {
   angular: "angular",
   astro: "astro",
+  cplusplus: "cplusplus",
+  csharp: "csharp",
   css: "css",
   dart: "dart",
   firebase: "firebase",
   flutter: "flutter",
   git: "git",
   github: "github",
+  ionic: "ionic",
   html: "html",
+  java: "java",
   javascript: "javascript",
   materialui: "materialui",
   mongodb: "mongodb",
   nestjs: "nestjs",
   nodejs: "nodejs",
+  python: "python",
   sqlserver: "sqlserver",
   tailwind: "tailwind",
   typescript: "typescript",
@@ -60,6 +65,14 @@ export const skills = [
     icon: IconKeys.astro,
   },
   {
+    title: "C#",
+    icon: IconKeys.csharp,
+  },
+  {
+    title: "C++",
+    icon: IconKeys.cplusplus,
+  },
+  {
     title: "CSS",
     icon: IconKeys.css,
   },
@@ -84,6 +97,14 @@ export const skills = [
     icon: IconKeys.html,
   },
   {
+    title: "Ionic",
+    icon: IconKeys.ionic,
+  },
+  {
+    title: "Java",
+    icon: IconKeys.java,
+  },
+  {
     title: "Javascript",
     icon: IconKeys.javascript,
   },
@@ -102,6 +123,10 @@ export const skills = [
   {
     title: "NodeJS",
     icon: IconKeys.nodejs,
+  },
+  {
+    title: "Python",
+    icon: IconKeys.python,
   },
   {
     title: "Tailwind",
